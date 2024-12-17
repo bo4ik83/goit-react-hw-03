@@ -28,6 +28,12 @@ const App = () => {
     setContacts((prevContacts) => [...prevContacts, newContact]);
   };
 
+  const deleteContact = (contactId) => {
+    setContacts((prevContacts) =>
+      prevContacts.filter((contact) => contact.id !== contactId)
+    );
+  };
+
   const filteredContacts = contacts.filter((contact) =>
     contact.name.toLowerCase().includes(filter.toLowerCase())
   );
@@ -38,7 +44,10 @@ const App = () => {
       <ContactForm onAddContact={addContact} />
       <SearchBox value={filter} onChange={handleFilterChange} />
       <h2>Contacts</h2>
-      <ContactList contacts={filteredContacts} />
+      <ContactList
+        contacts={filteredContacts}
+        onDeleteContact={deleteContact}
+      />
     </div>
   );
 };
