@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { nanoid } from "nanoid";
-import ContactList from "../ContactList/ContactList";
+import ContactList from "../ContactList/ContactList.jsx";
 import ContactForm from "../ContactForm/ContactForm.jsx";
-import SearchBox from "../SearchBox/SearchBox";
+import SearchBox from "../SearchBox/SearchBox.jsx";
 import "./App.css";
 
 const LOCAL_STORAGE_KEY = "contacts";
