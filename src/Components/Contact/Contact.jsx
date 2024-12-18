@@ -6,13 +6,13 @@ const Contact = ({ name, number, onDelete }) => (
     <div className={styles.info}>
       <div className={styles.name}>
         <span className={styles.icon}>
-          <img src="/svg/user.svg" alt="" width={18} height={18} />
+          <img src="/svg/user.svg" alt="name" width={18} height={18} />
         </span>{" "}
         {name}
       </div>
       <div className={styles.number}>
         <span className={styles.icon}>
-          <img src="/svg/phone.svg" alt="" width={18} height={18} />
+          <img src="/svg/phone.svg" alt="number" width={18} height={18} />
         </span>{" "}
         {number}
       </div>
